@@ -1,0 +1,33 @@
+DATA QUALITY SUMMARY
+====================
+
+Datasets Loaded Successfully:
+1. fund_master
+2. nav_history
+3. aum_by_fund_house
+4. monthly_sip_inflows
+5. category_inflows
+6. industry_folio_count
+7. scheme_performance
+8. investor_transactions
+9. portfolio_holdings
+10. benchmark_indices
+
+Checks Performed
+----------------
+✓ Shape validation
+✓ Data type inspection
+✓ Missing value check
+✓ Duplicate row check
+✓ Fund house exploration
+✓ Category exploration
+✓ Risk category analysis
+✓ AMFI code validation
+
+Observations
+------------
+- 40 schemes available.
+- 10 fund houses represented.
+- All AMFI codes are consistent between fund_master and nav_history.
+- No major structural issues observed.
+- Dataset is ready for cleaning and database loading.
