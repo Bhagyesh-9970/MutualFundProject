@@ -1,0 +1,23 @@
+DATA QUALITY REPORT
+
+1. Total files analysed: 6
+
+2. Files:
+- HDFC_Top100.csv
+- SBI_Bluechip.csv
+- ICICI_Bluechip.csv
+- Nippon_Large_Cap.csv
+- Axis_Bluechip.csv
+- Kotak_Bluechip.csv
+
+3. Checks performed:
+✓ Shape validation
+✓ Data type inspection
+✓ Missing value detection
+✓ Duplicate row detection
+
+4. Observations:
+- Date column present.
+- NAV values available.
+- No major anomalies observed.
+- Further validation will be performed after loading complete datasets.
