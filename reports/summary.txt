@@ -1,0 +1,293 @@
+# Mutual Fund Analytics Platform
+
+### Bluestock Fintech – Individual Capstone Project
+
+---
+
+# Project Description
+
+The **Mutual Fund Analytics Platform** is a full-stack data engineering and analytics solution designed to consolidate fragmented Indian mutual fund data into a single analytical platform. The project integrates data from public sources such as **AMFI India** and **mfapi.in**, processes it through an ETL pipeline, stores it in a relational database, performs financial and risk analysis, and presents insights using interactive dashboards.
+
+The platform enables investors and analysts to track NAV movements, analyze AUM trends, study investor behavior, compute risk-adjusted returns, and compare mutual funds with benchmark indices.
+
+---
+
+# Aim
+
+To build an end-to-end Mutual Fund Analytics Platform that automates data ingestion, cleaning, storage, analysis, and visualization of Indian mutual fund data for informed investment decision-making.
+
+---
+
+# Objectives
+
+### O1. Build an ETL Pipeline
+
+* Extract mutual fund datasets and live NAV data from public APIs.
+* Clean, transform, and validate the data.
+* Automate data processing using Python.
+
+### O2. Design a Relational Database
+
+* Create a star-schema database model.
+* Store data efficiently using SQLite/PostgreSQL.
+* Maintain relationships between dimension and fact tables.
+
+### O3. Perform Exploratory Data Analysis
+
+* Analyze NAV trends and AUM growth.
+* Study category-wise and fund-wise performance.
+* Generate statistical summaries and visualizations.
+
+### O4. Compute Financial Risk Metrics
+
+* Calculate Sharpe Ratio, Sortino Ratio, Alpha, Beta.
+* Measure Max Drawdown and Value-at-Risk (VaR).
+* Compare funds with benchmark indices.
+
+### O5. Analyze Investor Behaviour
+
+* Study SIP, lumpsum, and redemption transactions.
+* Perform demographic and geographic analysis.
+* Identify investment patterns across states and age groups.
+
+### O6. Build Interactive Dashboards
+
+* Develop Power BI/Tableau dashboards.
+* Create KPI cards and drill-down reports.
+* Provide fund comparison and performance views.
+
+### O7. Benchmark Mutual Fund Performance
+
+* Compare schemes with Nifty 50, Nifty 100, and BSE SmallCap.
+* Compute tracking error and alpha.
+* Evaluate fund outperformance.
+
+### O8. Deliver Complete Documentation
+
+* Maintain GitHub repository.
+* Create data dictionary and SQL scripts.
+* Prepare reports and presentation decks.
+
+---
+
+# Problem Statement
+
+Indian mutual fund data is scattered across multiple sources and formats, making investment analysis difficult. Investors and analysts lack a unified platform to evaluate fund performance, compare schemes, and understand investor behavior. This project addresses these challenges by creating a centralized analytics platform with automated ETL, database storage, risk analytics, and business intelligence dashboards.
+
+---
+
+# Technology Stack
+
+### Programming
+
+* Python
+
+### Libraries
+
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Plotly
+* Requests
+* SQLAlchemy
+* SciPy
+
+### Database
+
+* SQLite
+
+### Analytics
+
+* Jupyter Notebook
+
+### Visualization
+
+* Power BI / Tableau
+
+### Version Control
+
+* Git & GitHub
+
+---
+
+# Work Summary
+
+## Day 1 – Project Setup & Data Ingestion
+
+### Environment Setup
+
+* Created project folder structure.
+* Configured virtual environment.
+* Installed dependencies.
+* Initialized Git repository and GitHub.
+
+### Live API Integration
+
+Fetched live NAV data from mfapi.in for:
+
+* HDFC Top 100
+* SBI Bluechip
+* ICICI Bluechip
+* Nippon Large Cap
+* Axis Bluechip
+* Kotak Bluechip
+
+### Dataset Acquisition
+
+Downloaded and organized 10 datasets:
+
+1. Fund Master
+2. NAV History
+3. AUM by Fund House
+4. Monthly SIP Inflows
+5. Category Inflows
+6. Industry Folio Count
+7. Scheme Performance
+8. Investor Transactions
+9. Portfolio Holdings
+10. Benchmark Indices
+
+### Fund Master Analysis
+
+Created:
+
+* `fund_master_analysis.py`
+
+Analyzed:
+
+* Fund houses
+* Categories
+* Risk categories
+* Scheme metadata
+
+### AMFI Validation
+
+Created:
+
+* `validate_amfi_codes.py`
+
+Verified:
+
+* 40 AMFI codes in fund master
+* 40 matching codes in NAV history
+
+### Day 1 Deliverables
+
+* Project structure
+* requirements.txt
+* live_nav_fetch.py
+* fund_master_analysis.py
+* validate_amfi_codes.py
+* Raw datasets
+* GitHub repository
+
+---
+
+## Day 2 – Data Cleaning & Database Loading
+
+### Data Cleaning
+
+Created:
+
+* clean_nav_history.py
+* clean_transactions.py
+* clean_scheme_performance.py
+
+Performed:
+
+* Date parsing
+* Sorting and duplicate removal
+* Missing value handling
+* Transaction standardization
+* Numeric validation
+
+Generated:
+
+* 02_nav_history_cleaned.csv
+* 07_scheme_performance_cleaned.csv
+* 08_investor_transactions_cleaned.csv
+
+### Database Design
+
+Created:
+
+* schema.sql
+
+Implemented star schema:
+
+Dimension Tables
+
+* dim_fund
+* dim_date
+
+Fact Tables
+
+* fact_nav
+* fact_transactions
+* fact_performance
+
+### Database Creation
+
+Created:
+
+* create_database.py
+* load_to_database.py
+
+Generated:
+
+* bluestock_mf.db
+
+### SQL Analytics
+
+Created:
+
+* queries.sql
+* run_queries.py
+
+Performed analytical queries on:
+
+* AUM
+* NAV trends
+* Transactions
+* Fund performance
+
+### Documentation
+
+Created:
+
+* data_dictionary.md
+
+### Git Commit
+
+```
+Day 2: Cleaned data + SQLite DB loaded
+```
+
+---
+
+# Current Status
+
+✅ Day 1 Completed
+
+✅ Day 2 Completed
+
+🔄 Next Phase: Day 3 – Exploratory Data Analysis and Visualization
+
+### Project Repository Structure
+
+```
+MutualFundProject/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+├── scripts/
+├── notebooks/
+├── sql/
+├── dashboard/
+├── reports/
+├── bluestock_mf.db
+├── requirements.txt
+└── README.md
+```
