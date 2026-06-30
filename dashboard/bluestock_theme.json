@@ -1,0 +1,19 @@
+{
+  "name": "Bluestock",
+  "dataColors": [
+    "#0B5FFF",
+    "#1976D2",
+    "#42A5F5",
+    "#64B5F6",
+    "#90CAF9",
+    "#1565C0",
+    "#0D47A1",
+    "#81D4FA",
+    "#E3F2FD",
+    "#B3E5FC"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#0B1B2B",
+  "tableAccent": "#0B5FFF",
+  "visualStyles": {}
+}
