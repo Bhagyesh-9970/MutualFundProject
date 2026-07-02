@@ -48,6 +48,10 @@ MutualFundProject/
 ├── data/
 │   ├── raw/
 │   └── processed/
+├── docs/
+│   ├── PROJECT_SUMMARY.md
+│   ├── PROJECT_STRUCTURE.md
+│   └── SETUP_GUIDE.md
 ├── notebooks/
 ├── reports/
 ├── scripts/
